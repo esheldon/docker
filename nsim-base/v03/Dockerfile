@@ -1,8 +1,7 @@
 # install packages needed for nsim
-# can run this one with environment variables for the args to nsim
+# nsim itself is not installed here
 
-# base for this image
-# we enter here with user esheldon
+# we enter from galsim as user esheldon
 
 FROM esheldon/galsim:v02
 

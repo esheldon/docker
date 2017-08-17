@@ -1,4 +1,4 @@
-# this top pert mostly copied from the nersc site
+# get tmv and galsim installed, create esheldon user
 FROM ubuntu:16.04
 
 SHELL ["/bin/bash","-c"]
@@ -31,13 +31,10 @@ RUN TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o
     rm tini.deb && \
     apt-get clean
 
-# NERSC says won't work unless we build these ourselves
 RUN mkdir /build/
 WORKDIR /build
 
-#RUN cd /build && wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz \
-#  && tar xvzf Python-2.7.13.tgz && cd /build/Python-2.7.13 \
-#  && ./configure && make -j4 && make install && make clean && rm /build/Python-2.7.13.tgz
+# NERSC says won't work unless we build these ourselves
 
 RUN wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz \
   && tar xvzf mpich-3.2.tar.gz \
