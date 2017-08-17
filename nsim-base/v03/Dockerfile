@@ -1,5 +1,7 @@
 # install packages needed for nsim
-# nsim itself is not installed here
+# nsim itself is not installed here, rather
+# the nsim docker used for work should use
+# a FROM statement to base off this one
 
 # we enter from galsim as user esheldon
 
