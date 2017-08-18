@@ -14,7 +14,7 @@ WORKDIR /build
 
 RUN git clone https://github.com/esheldon/nsim.git \
     && cd nsim \
-    && git checkout 49568ecd70dacbf3f1645197bd4ec9456e1b0519 \
+    && git checkout 8a87631dc54690c19c160e9de372754f2d7eab90 \
     && python setup.py install
 
 
