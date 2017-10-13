@@ -36,6 +36,7 @@ RUN wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz \
 RUN /sbin/ldconfig
 RUN rm -rf /build/
 
+
 #
 # anaconda installed for user esheldon
 #
@@ -43,6 +44,9 @@ RUN rm -rf /build/
 # this creates a .bashrc
 RUN useradd --create-home --shell /bin/bash esheldon
 RUN adduser esheldon sudo
+
+RUN mkdir -p /data/lensing/shapesim
+RUN chown esheldon:esheldon /data/lensing/shapesim
 
 USER esheldon
 
