@@ -4,7 +4,9 @@
 FROM beckermr/stackvana:latest
 
 RUN \
-    . /usr/local/share/stackvana-activate.sh && conda update --all
+    . /usr/local/share/stackvana-activate.sh && \
+    conda update --all && \
+    conda remove --force mpi mpich mpi4py
 
 ARG mpich=3.3
 ARG mpich_prefix=mpich-$mpich
